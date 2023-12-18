@@ -26,10 +26,18 @@ var splide = new Splide('.splide', {
 });
 splide.mount();
 
-lightbox.option({
-  'resizeDuration': 200,
-  'wrapAround': true
-})
-
 new WOW().init();
+$('.search').click(function () {
+    $('.search-box').css('width', '100%');
+    $('.search-box').css('opacity', '1');
+    $('.search-box input').focus();
+})
+$('.search-box .close').click(function () {
+    $('.search-box').css('width', '0');
+    $('.search-box').css('opacity', '0');
+})
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  })
 // -------framwork css callback-----------
